@@ -8,4 +8,11 @@
     tools:context="com.byobdev.kamal.salir"
     tools:showIn="@layout/activity_salir">
 
+    <Button
+        android:id="@+id/salir"
+        android:layout_width="357dp"
+        android:layout_height="58dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="16dp" />
 </android.support.constraint.ConstraintLayout>

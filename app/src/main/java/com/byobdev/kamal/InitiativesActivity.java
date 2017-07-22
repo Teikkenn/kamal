@@ -3,23 +3,33 @@ package com.byobdev.kamal;
 import android.Manifest;
 import android.animation.PropertyValuesHolder;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.test.suitebuilder.TestMethod;
 import android.util.Log;
 import android.util.Property;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -28,6 +38,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class InitiativesActivity extends FragmentActivity implements OnMapReadyCallback, View.OnTouchListener {
 
     GoogleMap initiativesMap;
@@ -35,9 +47,14 @@ public class InitiativesActivity extends FragmentActivity implements OnMapReadyC
     FrameLayout shortDescriptionFragment;
     private float mLastPosY;
 
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initiatives);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -81,8 +98,10 @@ public class InitiativesActivity extends FragmentActivity implements OnMapReadyC
         Location start = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
         //Dummy points
-        interested = new LatLng(start.getLatitude(),start.getLongitude());
-        initiative1 = new LatLng(start.getLatitude()-0.005000,start.getLongitude()+0.005000);
+        //interested = new LatLng(start.getLatitude(),start.getLongitude());
+        interested = new LatLng(-33.4836473,-70.6558445);
+        //initiative1 = new LatLng(start.getLatitude()-0.005000,start.getLongitude()+0.005000);
+        initiative1 = new LatLng(-33.4823026,-70.6558445);
         interestedMarker = initiativesMap.addMarker(new MarkerOptions().position(interested).title("interested"));
         initiativesMap.addMarker(new MarkerOptions().position(initiative1).title("initiative1"));
         initiativesMap.moveCamera(CameraUpdateFactory.newLatLngZoom(interested,15));

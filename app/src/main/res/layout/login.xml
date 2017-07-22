@@ -57,12 +57,13 @@
             android:layout_height="wrap_content"
             android:text="Facebook"
             android:gravity="center"/>
-        <Button
-            android:id="@+id/googleLogin"
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Google"
-            android:gravity="center"/>
+            android:gravity="center">
+        </com.google.android.gms.common.SignInButton>
     </LinearLayout>
 
     <RelativeLayout
