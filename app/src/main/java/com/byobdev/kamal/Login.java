@@ -33,6 +33,9 @@ public class Login extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private static final String TAG = "LOGIN_ACTIVITY";
     Intent intent = new Intent(this, salirgoogle.class);
+    Intent migue = new Intent();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,9 @@ public class Login extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser()!=null){
+                    migue.setClassName("com.byobdev.kamal","com.byobdev.kamal.salirgoogle");
+                    startActivityForResult(migue,0);
+                    finish();
                     //startActivity(intent);    // Error al pasar a esta pagina, no se lo que sucede
                 }
             }
@@ -72,6 +78,8 @@ public class Login extends AppCompatActivity {
 
      ///////////////////////////////////////////////////////////GBM//////////
     }
+
+
 
     @Override
     protected void onStart() {

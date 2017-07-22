@@ -28,7 +28,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login">
-        <activity android:name=".salirgoogle"/>
+        </activity>
+        <activity android:name=".salirgoogle">
         </activity>
     </application>
 
