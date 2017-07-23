@@ -8,4 +8,6 @@
     <string name="login">Login</string>
     <string name="title_activity_login_test">LoginTest</string>
     <string name="title_activity_salir">salir</string>
+    <string name="facebook_app_id">333536560434984</string>
+    <string name="fb_login_protocol_scheme">fb333536560434984</string>
 </resources>
