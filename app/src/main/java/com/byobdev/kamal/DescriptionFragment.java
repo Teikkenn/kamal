@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-public class shortDescriptionFragment extends Fragment {
+public class DescriptionFragment extends Fragment {
 
 
 

@@ -6,8 +6,19 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+<<<<<<< HEAD
     <string name="title_activity_login_test">LoginTest</string>
     <string name="title_activity_salir">salir</string>
     <string name="facebook_app_id">333536560434984</string>
     <string name="fb_login_protocol_scheme">fb333536560434984</string>
+=======
+    <!-- Edit initiatives-->
+    <string name="in_name">Name</string>
+    <string name="in_short_desc">Short Description</string>
+    <string name="in_desc">Description</string>
+    <string name="in_images">Images</string>
+    <string name="in_where">Where</string>
+    <string name="in_save">Save</string>
+
+>>>>>>> cc24f7a9c1be1f556ebed2a5f84eedbc815b4789
 </resources>

@@ -29,13 +29,26 @@ dependencies {
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.google.android.gms:play-services-maps:11.0.2'
+    compile 'com.google.android.gms:play-services-location:11.0.2'
+    compile 'com.google.firebase:firebase-core:11.0.2'
     compile 'com.google.firebase:firebase-database:11.0.2'
+<<<<<<< HEAD
     compile 'com.google.android.gms:play-services-auth:11.0.2'
+=======
+    compile 'com.google.firebase:firebase-auth:11.0.2'
+    compile 'com.google.firebase:firebase-storage:11.0.2'
+    testCompile 'junit:junit:4.12'
+>>>>>>> cc24f7a9c1be1f556ebed2a5f84eedbc815b4789
     compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
     compile 'com.google.firebase:firebase-auth:11.0.2'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
+<<<<<<< HEAD
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
 }
 apply plugin: 'com.google.gms.google-services'
 
+=======
+}
+apply plugin: 'com.google.gms.google-services'
+>>>>>>> cc24f7a9c1be1f556ebed2a5f84eedbc815b4789
